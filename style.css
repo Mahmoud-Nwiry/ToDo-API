@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial,tahoma;
+}
+
+body{
+    background-color: #efefef;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 40%;
+    max-width: 70%;
+    margin: 35px 0;
+}
+.todo-list .list-head{
+    background-color: rgb(51, 183, 223);
+    color: #fff;
+    padding: 20px 25px;
+    border-radius:10px 10px 0 0 ;
+}
+.todo-list .list-head h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-box{
+    display: flex;
+}
+.input-box input[type="text"]{
+    width:74%;
+    padding: 10px;
+    font-size: 18px;
+    color: #444;
+    outline: none;
+    border: 0;
+}
+.input-box button{
+    padding: 10px;
+    font-size: 18px;
+    width: 25%;
+    border: none;
+    background-color: #4b4b4b;
+    color: #ffffff;
+    transition: .25s;
+    cursor: pointer;
+}
+.input-box button:hover{
+    background-color: #585858;
+}
+.list-body{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.list-body li{
+    padding: 10px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid rgba(204, 204, 204,.3);
+    position: relative;
+    color: #111;
+    transition: .25s;
+}
+.list-body li:hover{
+    background-color: #e9e9e9;
+}
+.list-body li.done{
+    background-color: rgb(154, 250, 170);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff
+}
+.list-body li.done:hover{
+    background-color: rgb(138, 230, 138);
+}
+.list-body li span{
+    padding: 2px 30px 2px 5px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    display: block;
+}
+.list-body li.done span{
+    text-decoration:.5px #999 line-through;
+    color: #555;
+}
+.list-body li input[type = "checkbox"]{
+    padding-left: 5px;
+    margin-right: 10px;
+}
+.list-body li small{
+    display: inline-block;
+    text-align: center;
+    padding-left: 25px;
+    font-size: 10px;
+}
+.list-body li a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .25s;
+    border-radius: 50px;
+}
+.list-body li a:hover{
+    background-color: red;
+    color: #fff;
+}
+@media (max-width: 575px) {
+    body{
+        padding: 10px;
+    }
+    .input-box{
+        display: block;
+        flex-direction: column;
+    }
+    .input-box input[type='text']{
+        width:98%;
+        height: 35px;
+        margin:10px 0;
+    }
+    .input-box button{
+        width: 98%;
+    }
+}
